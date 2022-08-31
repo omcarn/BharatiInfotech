@@ -1,0 +1,26 @@
+{
+    "headerText": "some introductory data about the store",
+
+    "homeSlideshowNumberofImages" : 3, 
+
+    "numberofCustomerToShow": 9,
+
+    "customerData":{
+
+        "customer1":"cust1",
+        "customer2":"cust2",
+        "customer3":"cust3",
+        "customer4":"cust4",
+        "customer5":"cust5",
+        "customer6":"cust6",
+        "customer7":"cust7",
+        "customer8":"cust8",
+        "customer9":"cust9"
+    },
+
+    "contactDetails": {
+        "storePhoneNumber" : " : +91 9999999999 / 9999999999",
+        "address" : " : Plot No R-148 Annapurna Niwas Kalyani Corner Near New RTO Office Kalyani Corner,Adarshanagar near New RTO Office Baramati, Maharashtra 413133 India"
+
+    }
+}
