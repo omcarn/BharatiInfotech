@@ -185,15 +185,7 @@
     <div id="home-container-box">
         <div class="home-container d-flex p-5">
             <div id="home-carousel" class="carousel slide mt-1 pb-5" data-bs-ride="carousel">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#home-carousel" data-bs-slide-to="0" class="active"
-                        aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#home-carousel" data-bs-slide-to="1"
-                        aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#home-carousel" data-bs-slide-to="2"
-                        aria-label="Slide 3"></button>
-                </div>
-                <div id="home-carousel-inner" class="carousel-inner">
+                <div id="home-carousel-inner" class="carousel-inner">                   
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#home-carousel"
                     data-bs-slide="prev">
@@ -476,19 +468,18 @@
     // inits home slideshow images
     function initCarouselImages(numberOfImages) {
 
-        for (let i = 0; i < numberOfImages; i++) {
+        for (let i = 1; i <= numberOfImages; i++) {
 
             let imgElem = document.createElement("img");
-            imgElem.src = 'images/slide-show-home/image' + (i + 1) + '.jpg';
+            imgElem.src = 'images/slide-show-home/image' + i + '.jpg';
             imgElem.classList.add("d-block", "w-100");
 
             let slideElem = document.createElement("div");
-            slideElem.classList.add('carousel-item');
+            i === 1 ? slideElem.classList.add("carousel-item","active") : slideElem.classList.add("carousel-item");
             slideElem.appendChild(imgElem);
 
             document.getElementById('home-carousel-inner').appendChild(slideElem);
         }
-        document.getElementById('home-carousel-inner').firstElementChild.classList.add('active');
     }
 
     // inits customer images and text data
