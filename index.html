@@ -33,6 +33,37 @@
             background-color: lightblue !important;
         }
 
+        .link{
+            position: relative;
+            display: inline-block;
+            text-decoration: none;
+        }
+
+        .link::before , .link::after{
+            content: '';
+            position:absolute;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: grey;
+            transform: scaleX(0);
+            transition: transform .25s;
+        }
+
+        .link::before{
+            top:-1px;
+            transform-origin: right;
+        }
+
+        .link::after{
+            bottom:-1px;
+            transform-origin: left;
+        }
+
+        .link:hover::after, .link:hover::before{
+            transform: scaleX(1);
+        }
+
         body {
             overflow-y: visible;
         }
@@ -56,6 +87,10 @@
 
             .navbar {
                 background-color: inherit !important;
+            }
+
+            .link::before , .link::after{
+                display: none;
             }
 
             .b-example-divider {
@@ -156,6 +191,9 @@
             height: 50%;
             top: 25%;
         }
+
+        
+
     </style>
 
 </header>
@@ -171,12 +209,12 @@
             <span class="navbar-company-name-md fw-bold fs-5">Bharati Infotech</span>
             <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
                 <div class="navbar-nav fw-semibold">
-                    <a class="nav-link" style="color: black !important;" -carousel-lg aria-current="page"
+                    <a class="nav-link link" style="color: black !important;" -carousel-lg aria-current="page"
                         href="#">Home</a>
-                    <a class="nav-link" style="color: black !important;" -carousel-lg href="#solutions">Solutions</a>
-                    <a class="nav-link" style="color: black !important;" -carousel-lg href="#inventory">Inventory</a>
-                    <a class="nav-link" style="color: black !important;" -carousel-lg href="#customers">Customers</a>
-                    <a class="nav-link" style="color: black !important;" -carousel-lg href="#contactus">Contact Us</a>
+                    <a class="nav-link link" style="color: black !important;" -carousel-lg href="#solutions">Solutions</a>
+                    <a class="nav-link link" style="color: black !important;" -carousel-lg href="#inventory">Inventory</a>
+                    <a class="nav-link link" style="color: black !important;" -carousel-lg href="#customers">Customers</a>
+                    <a class="nav-link link" style="color: black !important;" -carousel-lg href="#contactus">Contact Us</a>
                 </div>
             </div>
         </div>
